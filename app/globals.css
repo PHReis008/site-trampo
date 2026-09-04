@@ -1,12 +1,66 @@
 @import 'tailwindcss';
 
-:root { --background:#f6f5f2; --foreground:#17212b; --navy:#102a43; --gold:#b28b48; --muted:#65727c; --line:#d9ddd9; }
-@theme inline { --color-background:var(--background); --color-foreground:var(--foreground); --font-sans:var(--font-sans); --font-serif:var(--font-serif); }
-* { box-sizing:border-box; }
-html { scroll-behavior:smooth; }
-body { margin:0; background:var(--background); color:var(--foreground); font-family:var(--font-sans), sans-serif; }
-.font-serif { font-family:var(--font-serif), serif; }
-::selection { background:#d7c39b; color:var(--navy); }
-@keyframes rise { from { opacity:0; transform:translateY(18px); } to { opacity:1; transform:none; } }
-.reveal { animation:rise .8s ease-out both; }
-@media (prefers-reduced-motion: reduce) { *, html { scroll-behavior:auto !important; animation-duration:.01ms !important; } }
+:root {
+    --background: #f6f5f2;
+    --foreground: #17212b;
+    --navy: #102a43;
+    --gold: #b28b48;
+    --muted: #65727c;
+    --line: #d9ddd9;
+}
+
+@theme inline {
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --font-sans: var(--font-sans);
+    --font-serif: var(--font-serif);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans), sans-serif;
+}
+
+.font-serif {
+    font-family: var(--font-serif), serif;
+}
+
+::selection {
+    background: #d7c39b;
+    color: var(--navy);
+}
+
+@keyframes rise {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.reveal {
+    animation: rise .8s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    html {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+    }
+}
